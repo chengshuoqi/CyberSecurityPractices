@@ -225,7 +225,7 @@
     ```
     <div><img src="img/log4j2ip地址.png" width=60%></div>
 
-    - 添加站点，自定义一个简单的拦截页面，设置上游服务器为 `<容器 log4j2_exp 的内部 IP 地址>:8888` ，勾选中设置的规则。
+    - 添加站点，自定义一个简单的拦截页面，设置上游服务器为 `<容器 log4j2_exp 的内部 IP 地址>:8080` ，勾选中设置的规则。
     <div><img src="img/waf上游服务器设置.png" width=100%></div>
     <div><img src="img/选中设置的规则.png" width=100%></div>
 
