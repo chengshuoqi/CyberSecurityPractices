@@ -1,4 +1,4 @@
-# DMZ实验部分
+z# DMZ实验部分
 ## DMZ环境搭建
 
 ### 网卡创建
@@ -364,7 +364,7 @@ wget "http://192.169.85.2/index.php?cmd=ls /tmp" -O /tmp/result && cat /tmp/resu
    * 攻击者 ip：192.168.56.104
    * HTTP 头部：POST / HTTP/1.1 → 通常用于提交数据，符合 Struts2 攻击特征
    ![抓包中http的数据包](./img/抓包中http的数据包.png)
-2. **追踪流：** 看到完整的 HTTP 请求（攻击 payload）及其服务器返回的响应。
+2. **追踪流：** 看到完整的 HTTP 请求（攻击 payload）。
    ![对http包进行追踪流](./img/对http包进行追踪流.png)
    * 目标地址：192.168.56.105:26106
 3. **对请求体进行URL解码：** ``%25 ``实际上是`` % ``的 URL 编码
